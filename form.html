@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="form.css">
+  
+</head>
+<body>
+
+<!--1st page-->
+
+    <form action="form.php"method="POST" class="formCotainer">
+        <div id="step1"> </div>
+        <label for="">Service </label>
+        <select name="serviceSelection" id="serviceSelection">
+            <option value="Select Service">Select Service</option>
+            <option value="Hair colour and cut">Hair colour and cut 30£</option>
+            <option value="cut and beard trim">Cut and beard trim 30£</option>
+        </select>
+
+        <label for="">Barber </label>
+        <select name="SelectBarber" id="SelectBarber">
+            <option value="Pablo">Pablo</option>
+            <option value="Dezzy">Dezzy</option>
+        </select><br><br>
+
+        <!-- Button for Step 1 -->
+        <button type="button" id="nextBTN1">NEXT</button>
+
+
+
+<!--2nd page-->
+
+        <div id="step2">
+            <label for="">Date</label>
+            <input type="date" id="date">
+            <label for="">Time</label>
+            <input type="time"id="time">
+<br><br>
+            <button id="backbtn1" type="">BACK</button>  
+            <button id="nextbtn2">NEXT</button>
+        </div>
+   
+
+    <!--3rd page-->
+    
+         <div id="step3">
+            <p id="text">You selected a booking for & Cut by Ahmed at 8:30 am on December 28, 2024. The price for the service is £200.00.
+                 Please provide your details in the form below to proceed with booking.</p>
+
+
+
+             <label for="">Full name</label>
+            <input type="text" name="name" placeholder="Jemar Porteous" required>
+            <label for="">Phone</label>
+            <input type="text" placeholder="07830045311" required> <br>
+            <label for="">Email</label>
+            <input type="email" placeholder="pab@hotmail.com" required>
+            <label for="">Confirm Email</label>
+            <input type="email" placeholder="pab@hotmail.com" required> <br> <br>
+            <label for="notes">Notes</label>
+            <input type="text" >
+            <br><br>
+            <button id="backbtn2">BACK</button>  
+            <button id="nextbtn3" type="button">NEXT</button>
+        </div>
+    <!--4th page-->
+
+        <div id="step4">
+<h2>PAYMENT PORTAL</h2>
+
+<select>
+<label for="">Card type </label>
+    <option value="">Mastercard</option>
+    <option value="">Credit Card </option>
+    <option value="">Apple Pay</option>
+    </select>
+
+    <label for="">Card number</label>
+    <input type="number" placeholder="0072 7685 3213 1203">
+    <label for="">Expiry Date</label>
+    <input type="number" name="" id="" placeholder=" 11/28">
+    <label for="">Cvc</label>
+    <input type="number"placeholder="321">
+
+    <button type="submit">Submit </button>
+
+
+        </div>
+    </form>
+<body>
+  
+
+
+
+    </form>
+
+    <script src="./index.js">
+      
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <script>
+    window.selectedInfo = null;
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendarEl = document.getElementById('calendar');
+
+    // Assume you get the booking title from a previous step
+    const bookingTitle = "Haircut Booking"; // Replace this with the actual title from the previous slide
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'timeGridWeek', // Show week view with time slots
+      editable: true, // Allow drag/drop
+      selectable: true, // Enable selecting time slots
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay',
+      },
+      select: function (info) {
+        // Use the passed-in booking title
+        const title = bookingTitle || prompt('Enter a title for your booking:');
+        if (title) {
+          calendar.addEvent({
+            title: title,
+            start: info.startStr, // Start date and time
+            end: info.endStr,     // End date and time
+            allDay: info.allDay,  // Whether it’s an all-day event
+          });
+          alert(`Booking "${title}" added on ${info.startStr}`);
+        }
+        calendar.unselect();
+      },
+      eventClick: function (info) {
+        // Optionally allow deleting or editing events
+        if (confirm(`Do you want to delete the booking "${info.event.title}"?`)) {
+          info.event.remove();
+        }
+      },
+    });
+
+    calendar.render();
+  });
+
+  
+  
+
+</script> -->
